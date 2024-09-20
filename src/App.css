@@ -1,0 +1,183 @@
+* {
+  box-sizing: border-box; /* Ensure padding and borders are included in element's total width and height */
+}
+
+.App {
+  font-family: Arial, sans-serif;
+  text-align: center; /* Center text within the app */
+  margin: 0 auto; /* Center the app on the page */
+  background-color: black; /* Black background color */
+  color: white; /* White text color */
+  min-height: 100vh; /* Ensure the background color covers the entire viewport */
+  padding: 20px;
+  display: flex; /* Use flexbox for layout */
+  flex-direction: column; /* Stack children vertically */
+  align-items: center; /* Center align items */
+}
+
+form {
+  margin-bottom: 20px;
+  display: flex; /* Use flexbox for form layout */
+  flex-direction: column; /* Stack inputs vertically */
+  align-items: center; /* Center align items */
+}
+
+input, textarea {
+  display: block;
+  margin: 10px auto;
+  width: 80%; /* Default width for inputs */
+  max-width: 500px; /* Max width for larger screens */
+  padding: 10px;
+  font-size: 16px;
+  background-color: #333; /* Dark background for input fields */
+  color: white; /* White text color for input fields */
+  border: 1px solid #555; /* Border for input fields */
+  border-radius: 4px; /* Rounded corners */
+  transition: border 0.3s; /* Smooth transition for border */
+}
+
+input:focus, textarea:focus {
+  border: 1px solid #007bff; /* Highlight border on focus */
+}
+
+button {
+  margin: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #007bff; /* Button background color */
+  color: white; /* Button text color */
+  border: none; /* Remove default button border */
+  border-radius: 4px; /* Rounded corners */
+  transition: background 0.3s; /* Smooth transition for background */
+}
+
+button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+.note-item {
+  border: 1px solid #ddd;
+  margin: 10px;
+  padding: 10px;
+  background-color: #222; /* Dark background for note items */
+  color: white; /* White text color for note items */
+  border-radius: 4px; /* Rounded corners */
+  width: 80%; /* Set width for note items */
+  max-width: 500px; /* Max width for larger screens */
+}
+
+.note-item h2 {
+  margin: 0;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+  padding: 0;
+}
+
+.pagination li {
+  margin: 5px;
+}
+
+.pagination li a {
+  text-decoration: none;
+  padding: 10px;
+  border: 1px solid #ddd;
+  background-color: #333; /* Dark background for pagination links */
+  color: white; /* White text color for pagination links */
+  border-radius: 4px; /* Rounded corners */
+}
+
+.pagination li.active a {
+  background-color: #007bff; /* Active page background color */
+  color: white;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  input, textarea {
+    width: 90%; /* Increase width on smaller screens */
+  }
+
+  button {
+    width: 90%; /* Increase button width on smaller screens */
+    margin: 10px 0; /* Adjust margins for better spacing */
+  }
+
+  .note-item {
+    padding: 15px; /* Increase padding for note items */
+  }
+}
+
+@media (max-width: 480px) {
+  .App {
+    padding: 10px; /* Reduce padding on very small screens */
+  }
+
+  button {
+    padding: 10px; /* Adjust button padding */
+  }
+
+  .note-item {
+    margin: 5px; /* Reduce margin for note items */
+  }
+
+  input, textarea {
+    font-size: 14px; /* Slightly reduce font size */
+  }
+}
+.note-item {
+  border: 1px solid #ddd;
+  margin: 10px;
+  padding: 10px;
+  background-color: #222; /* Dark background for note items */
+  color: white; /* White text color for note items */
+  border-radius: 4px; /* Rounded corners */
+  width: 80%; /* Set width for note items */
+  max-width: 500px; /* Max width for larger screens */
+  display: flex; /* Use flexbox for layout */
+  flex-direction: column; /* Stack children vertically */
+  align-items: flex-start; /* Align items to the left */
+}
+
+.note-item h2 {
+  margin: 0;
+}
+
+.note-buttons {
+  display: flex; /* Use flexbox for button layout */
+  justify-content: flex-start; /* Align buttons to the left */
+  margin-top: 10px; /* Add space above buttons */
+}
+
+.note-buttons button {
+  margin-right: 5px; /* Add space between buttons */
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .note-item {
+    padding: 15px; /* Increase padding for note items on smaller screens */
+  }
+
+  .note-buttons button {
+    padding: 8px; /* Adjust button padding for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .note-item {
+    margin: 5px; /* Reduce margin for note items on very small screens */
+  }
+
+  .note-item h2 {
+    font-size: 18px; /* Reduce font size for note titles */
+  }
+
+  .note-buttons button {
+    padding: 5px; /* Adjust button padding for very small screens */
+  }
+}
